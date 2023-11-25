@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<h1>{{tarea.titulo}}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+<button>
+    actualizar blog
+</button>
+</form>
+<form action="{% url 'tareacompletada' tarea.id %}" method="post">
+    {% csrf_token %}
+            <button>
+    completado
+            </button>
+</form>
+<form action="{% url 'borrar' tarea.id %}" method="post">
+    {% csrf_token %}
+            <button>
+    borrar
+            </button>
+</form>
+
+
+ {% endblock content %}

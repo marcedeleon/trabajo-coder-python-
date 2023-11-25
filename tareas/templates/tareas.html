@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container">
+  <h1>BLOG PRINCIPAL DEL USUARIO</h1>
+  <h2>Lista de blogs en trabajo</h2>
+
+  {% if tareas %}
+  <ul class="list-group">
+    {% for task in tareas %}
+    <li class="list-group-item">
+      <a href="{% url 'detalletarea' task.id %}">
+        <div class="d-flex w-100 justify-content-between">
+          <h3 class="mb-1">{{ task.titulo }}</h3>
+          <small>{{ task.fecha_fin|date:'M j Y' }}</small>
+        </div>
+        <p class="mb-1">{{ task.descripcion }}</p>
+        <p class="mb-1">Creado por: {{ task.usuario.username }}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No hay tareas disponibles.</p>
+  {% endif %}
+</div>
+
+{% endblock %}

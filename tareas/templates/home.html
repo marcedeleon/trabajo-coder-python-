@@ -1,0 +1,42 @@
+<h1>BIENVENIDOS AL BLOCK PRINCIPAL</h1>
+
+<h2>desde ahora nesecita estar registrado</h2>
+<h2>por favor registrese para continuar</h2>
+
+{% extends "base.html" %} {% block content %}
+<main class="container py-10">
+  <section class="card card-body">
+  <h2>Acerca de mi</h2>
+  <p>
+    Mi nombre es Marcelo Alejandro De León. soy Técnico en Electrónica técnico de
+    computadoras y actualmente estoy desarrollando mi carrera como desarrollador.
+    Me encuentro en los Trabajos Finales del Curso De PYTHON en CODERHOUSE, ya
+    termine los Cursos de SQL y TERSTER QA Manual. También estoy estudiando
+    INGLES en la Cultural Inglesa de Banfield y estoy haciendo los Cursos de
+    Ciberseguridad de CISCO. El 2024 arranco la Facultad en la carrera de
+    Licenciado en Software y estoy en la búsqueda de mi primer trabajo en
+    Sistemas. Me ayudarían un montón en mi carrera si me pueden recomendar para
+    trabajos remotos.
+
+    </p>
+    </section>
+</main>
+<main  class="container py-5">
+  <section class="card card-body">
+  <h2>Acerca de esta pagina</h2>
+
+  <p>
+    En esta página podemos crear usuarios y una vez creados los usuarios pueden crear blogs personales, visualizar sus propios blogs, modificar los blogs ya creados previamente y finalizarlos. una vez que están finalizados los pueden visualizar en otro apartado en la misma página. Lo que pusimos en práctica fue las técnicas de crear Aplicaciones como Registros de Usuarios también creamos Formularios y agregamos manejo de errores. Trabajamos con témplates, condicionales ,
+    modelos y funciones llegamos a listar tareas y protegimos rutas.
+  </p>
+  <div>
+    <a class="btn btn-primary"   href="/signin/">
+      inicio
+    </a>
+    <a class="btn btn-primary"   href="/registrar/">
+      registrar
+    </a>
+  </div>
+  </section>
+</main>
+{% endblock %}
